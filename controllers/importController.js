@@ -15,7 +15,8 @@ const importPhotos = async (req, res) => {
 
         const drive = google.drive({version: 'v3', auth: OAuth2Client});
         const files = [];
-        const categories = new Array('Painting"', 'Drawing"');
+        // Add new categories TODO add logic for no results in category
+        const categories = new Array('Painting"', 'Drawing"', 'Mixed"');
         const a = new Array();
         let counter = 0;
         try {
@@ -42,13 +43,11 @@ const importPhotos = async (req, res) => {
                     count++;
                     //console.log(c);
                 });
-                //console.log("C after adding: " + c);
-                //console.log('Found Files: ', count);
-                //console.log("A before adding c: " + a);
-                a.push(c);
-                //console.log("A after adding: " + a);
-                counter++;
-                //const b = a;
+                if(count != 0){
+                    a.push(c);
+                    counter++;
+
+                }
             }
             //res.header("Access-Control-Allow-Origin: *");
             //await function sleep(){return new Promise((resolve) => {setTimeout(resolve, 1000);});}
