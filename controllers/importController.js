@@ -15,7 +15,7 @@ const importPhotos = async (req, res) => {
 
         const drive = google.drive({version: 'v3', auth: OAuth2Client});
         const files = [];
-        const categories = new Array('Paint"', 'Photo"');
+        const categories = new Array('Painting"', 'Drawing"');
         const a = new Array();
         let counter = 0;
         try {
@@ -35,7 +35,10 @@ const importPhotos = async (req, res) => {
                 Array.prototype.push.apply(files, result.files);
                 result.data.files.forEach(function(file) {
                     console.log('Found file:', file.name, file.id, file.webViewLink);
-                    c[count] = file.name + ":" + file.id;
+                    let temp = new Array();
+                    temp = file.name.split(".");
+                    let name = temp[0];
+                    c[count] = name + "@" + file.id;
                     count++;
                     //console.log(c);
                 });
