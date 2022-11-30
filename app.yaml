@@ -1,0 +1,8 @@
+runtime: nodejs16
+
+env_variables:
+  PORT: 8080
+  CLIENT_ID: 865875845493-9djviph0sdv3mulhko1afchne7ipg92d.apps.googleusercontent.com
+  CLIENT_SECRET: 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
+  REFRESH_TOKEN: 1//04PZvFybl2kEZCgYIARAAGAQSNwF-L9IrejZ5sHzplydZCffuqaS1xUYMLtdSVPxnh17xZQjAfUbBOEA1dSHBqTyruFwkfj87vsI
+  REDIRECT_URL: https://developers.google.com/oauthplayground
