@@ -16,7 +16,7 @@ const importPhotos = async (req, res) => {
         const drive = google.drive({version: 'v3', auth: OAuth2Client});
         const files = [];
         // Add new categories TODO add logic for no results in category
-        const categories = new Array('Painting"', 'Drawing"', 'Mixed"');
+        const categories = new Array('Painting"', 'Drawing"', 'Mixed"', 'Photography"','Illustration"', 'Sculpture"','Oil"', 'Acrylic"');
         const a = new Array();
         let counter = 0;
         try {
