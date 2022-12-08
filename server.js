@@ -21,3 +21,10 @@ app.listen(port, () => {
 
 // Routes
 app.use('/photos', photosRoutes)
+
+
+//TODO
+//- security, only accessaable from https://hopeemilyportfolio.netlify.app 
+// probably app.use(cors({credentials: true, origin: 'https://hopeemilyportfolio.netlify.app'}))
+//
+//- provide placeholder images if none are found
